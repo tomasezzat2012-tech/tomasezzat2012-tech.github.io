@@ -54,8 +54,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"><style>.reveal{opacity:1;transform:none}
-</style></noscript>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"><style>.reveal{opacity:1;transform:none}</style></noscript>
 <style>
 :root{
   --bg:#070b18;--bg2:#0c1226;--card:rgba(20,27,52,.6);--line:rgba(120,140,255,.14);
@@ -265,53 +264,6 @@ footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:v
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
-/* ===== حركات وألوان إضافية (خفيفة: transform/opacity فقط) ===== */
-html{overflow-x:hidden}
-.hero{overflow:hidden}
-:root{--d:#ff7ab6;--e:#ffb547;--grad2:linear-gradient(100deg,var(--a),var(--c) 45%,var(--d))}
-.hero h1 .grad-text{background:linear-gradient(100deg,var(--a),var(--b),var(--c),var(--a));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 7s linear infinite}
-@keyframes flow{to{background-position:-250% 0}}
-.orb{position:absolute;border-radius:50%;pointer-events:none;will-change:transform}
-.orb.o1{width:420px;height:420px;top:6%;right:-120px;background:radial-gradient(circle,rgba(179,107,255,.28),transparent 68%);animation:float1 14s ease-in-out infinite}
-.orb.o2{width:380px;height:380px;bottom:0;left:-110px;background:radial-gradient(circle,rgba(34,211,166,.22),transparent 68%);animation:float1 17s ease-in-out infinite reverse}
-.orb.o3{width:260px;height:260px;top:48%;left:42%;background:radial-gradient(circle,rgba(255,122,182,.16),transparent 70%);animation:float1 20s ease-in-out infinite}
-@keyframes float1{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(30px,-40px,0)}}
-/* بطاقات: توهّج يتبع الماوس + ألوان أيقونات متنوعة */
-.card{--mx:50%;--my:50%;--ic:var(--b)}
-.card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(260px circle at var(--mx) var(--my),rgba(108,140,255,.16),transparent 70%)}
-.card:hover::before{opacity:1}
-.card{transition:border-color .25s,background .25s,transform .3s}
-@media(hover:hover){.card:hover{transform:translateY(-6px)}}
-.card .icon{transition:transform .35s cubic-bezier(.3,1.6,.5,1),background .3s;background:color-mix(in srgb,var(--ic) 14%,transparent)}
-.card .icon svg{stroke:var(--ic)}
-.card:hover .icon{transform:rotate(-8deg) scale(1.12)}
-.grid .card:nth-child(4n+1){--ic:var(--b)}
-.grid .card:nth-child(4n+2){--ic:var(--a)}
-.grid .card:nth-child(4n+3){--ic:var(--d)}
-.grid .card:nth-child(4n+4){--ic:var(--e)}
-.steps .card:nth-child(4n+1){--ic:var(--e)}.steps .card:nth-child(4n+2){--ic:var(--d)}.steps .card:nth-child(4n+3){--ic:var(--a)}.steps .card:nth-child(4n+4){--ic:var(--b)}
-/* أزرار: لمعة تعدّي */
-.btn::after{content:"";position:absolute;top:0;bottom:0;width:60%;left:-80%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);transition:left .6s}
-.btn:hover::after{left:130%}
-.btn:active{transform:scale(.97)}
-/* عناوين الأقسام: خط متدرج يتمدد */
-h2::after{content:"";display:block;width:0;height:4px;margin:12px auto 0;border-radius:4px;background:var(--grad2);transition:width .8s cubic-bezier(.2,.8,.2,1)}
-h2.in::after{width:84px}
-.eyebrow{background:var(--grad2);-webkit-background-clip:text;background-clip:text;color:transparent}
-/* باقات: الأشهر بتنبض بهدوء */
-.plan.hot{box-shadow:0 0 0 1px rgba(34,211,166,.4),0 18px 50px rgba(34,211,166,.12);animation:glow 3.5s ease-in-out infinite}
-@keyframes glow{50%{box-shadow:0 0 0 1px rgba(34,211,166,.7),0 22px 60px rgba(34,211,166,.22)}}
-.plan:nth-child(1) .price{color:var(--a)}.plan:nth-child(2) .price{color:var(--b)}.plan:nth-child(3) .price{color:var(--d)}
-/* أنواع ظهور مختلفة */
-.reveal.from-l{transform:translateX(-34px)}.reveal.from-r{transform:translateX(34px)}.reveal.zoom{transform:scale(.92)}
-.reveal.in{transform:none}
-/* الموبايل: أيقونات عايمة حواليه */
-.chip{position:absolute;padding:8px 14px;border-radius:14px;font-size:.85rem;font-weight:800;color:#06101f;box-shadow:0 10px 24px rgba(0,0,0,.35);animation:bob 5s ease-in-out infinite;will-change:transform}
-.chip.c1{top:12%;right:-6px;background:var(--b)}.chip.c2{bottom:22%;left:-10px;background:var(--e);animation-delay:1.2s}.chip.c3{top:46%;right:-22px;background:var(--d);animation-delay:2.2s}
-@keyframes bob{50%{transform:translateY(-12px)}}
-/* تباين أقسام بالتناوب */
-section:nth-of-type(even){background:linear-gradient(180deg,transparent,rgba(108,140,255,.045),transparent)}
-@media(max-width:900px),(pointer:coarse){.orb.o3{display:none}.orb{animation-duration:26s}.chip.c3{display:none}}
 </style>
 </head>
 <body>
@@ -359,7 +311,6 @@ section:nth-of-type(even){background:linear-gradient(180deg,transparent,rgba(108
 
 <main>
   <section class="hero" id="home">
-  <i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i>
     <div class="container">
       <div>
         <div class="codeline"><span class="pr">&gt;_</span><span id="codeTyped"></span><i class="cur"></i></div>
@@ -373,7 +324,6 @@ section:nth-of-type(even){background:linear-gradient(180deg,transparent,rgba(108
         </div>
       </div>
       <div class="phone-wrap">
-        <span class="chip c1">تطبيقات</span><span class="chip c2">ويب</span><span class="chip c3">UI/UX</span>
         <div class="phone">
           <div class="screen">
             <div class="notch"></div>
@@ -401,10 +351,10 @@ section:nth-of-type(even){background:linear-gradient(180deg,transparent,rgba(108
       <h2 class="reveal">بنبني لك <span class="grad-text">اللي محتاجه</span></h2>
       <p class="sub reveal">من التصميم للتطوير للدعم بعد التسليم</p>
       <div class="grid">
-        <div class="card reveal from-r"><div class="icon"><svg><use href="#i-mobile"/></svg></div><h3>تطبيقات الموبايل</h3><p>تطبيقات بتشتغل على Android و iOS، بواجهة بسيطة وسريعة.</p></div>
+        <div class="card reveal"><div class="icon"><svg><use href="#i-mobile"/></svg></div><h3>تطبيقات الموبايل</h3><p>تطبيقات بتشتغل على Android و iOS، بواجهة بسيطة وسريعة.</p></div>
         <div class="card reveal d1"><div class="icon"><svg><use href="#i-globe"/></svg></div><h3>تطبيقات الويب</h3><p>مواقع ومنصات ويب بتظهر صح على الموبايل والكمبيوتر وتناسب نشاطك.</p></div>
         <div class="card reveal d2"><div class="icon"><svg><use href="#i-pen"/></svg></div><h3>تصميم UI/UX</h3><p>واجهات واضحة وسهلة الاستخدام، متصممة حوالين اللي مستخدمك محتاجه.</p></div>
-        <div class="card reveal from-l d3"><div class="icon"><svg><use href="#i-wrench"/></svg></div><h3>الدعم والصيانة</h3><p>دعم فني بعد التسليم، وتعديلات وتطوير لما المشروع يكبر.</p></div>
+        <div class="card reveal d3"><div class="icon"><svg><use href="#i-wrench"/></svg></div><h3>الدعم والصيانة</h3><p>دعم فني بعد التسليم، وتعديلات وتطوير لما المشروع يكبر.</p></div>
       </div>
     </div>
   </section>
@@ -481,7 +431,7 @@ section:nth-of-type(even){background:linear-gradient(180deg,transparent,rgba(108
           </ul>
           <a href="#contact" class="btn ghost" data-plan="1">اطلب الآن</a>
         </div>
-        <div class="card plan hot reveal zoom d1">
+        <div class="card plan hot reveal d1">
           <span class="tag">الأكثر طلباً</span>
           <div class="price">750 <small>جنيه</small></div>
           <ul>
@@ -875,18 +825,6 @@ var CONFIG = {
     });
     render(list);
   }).catch(function(){ msg('مقدرناش نحمّل المشاريع دلوقتي، جرّب تحدّث الصفحة بعد شوية.') });
-})();
-
-/* توهّج البطاقات يتبع الماوس (للأجهزة اللي فيها ماوس فقط) */
-(function(){
-  if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches)return;
-  var t=null,ev=null;
-  document.addEventListener('pointermove',function(e){
-    var c=e.target.closest&&e.target.closest('.card'); if(!c)return;
-    ev=e;t=c; if(t._r)return; t._r=requestAnimationFrame(function(){
-      var r=t.getBoundingClientRect(); t.style.setProperty('--mx',(ev.clientX-r.left)+'px'); t.style.setProperty('--my',(ev.clientY-r.top)+'px'); t._r=0;
-    });
-  },{passive:true});
 })();
 </script>
 </body>
