@@ -264,6 +264,11 @@ footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:v
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* إصلاح: منع الصفحة من الاتساع بسبب الشريط المتحرك (كان بيخفي المحتوى على بعض الموبايلات) */
+html{overflow-x:hidden;max-width:100%}
+body{overflow-x:hidden;max-width:100%;position:relative}
+.marquee{overflow:hidden;max-width:100%;contain:paint}
 </style>
 </head>
 <body>
