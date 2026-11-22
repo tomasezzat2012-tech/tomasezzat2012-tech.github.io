@@ -3,16 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Codex | تصميم وتطوير التطبيقات وتطبيقات الموبايل والويب</title>
-<meta name="description" content="Codex: عالم البرمجة وتصميم وتطوير التطبيقات والمواقع بأفكار إبداعية وحلول تقنية حديثة.">
-<meta name="keywords" content="Codex, كودكس, تصميم تطبيقات, تطوير تطبيقات, برمجة تطبيقات موبايل, تطبيقات ويب, تصميم مواقع, UI UX, مصر">
+<title>Codex | برمجة وتصميم تطبيقات الموبايل</title>
+<meta name="description" content="Codex: برمجة وتصميم تطبيقات موبايل بأفكار إبداعية وحلول تقنية حديثة، مع دعم فني وصيانة بعد التسليم.">
+<meta name="keywords" content="Codex, كودكس, تصميم تطبيقات, تطوير تطبيقات, برمجة تطبيقات موبايل, Kotlin, Jetpack Compose, UI UX, مصر">
 <meta name="author" content="Codex">
-<meta name="application-name" content="Codex">
-<meta name="apple-mobile-web-app-title" content="Codex">
-<meta name="color-scheme" content="dark">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#070b18">
-<meta name="google-site-verification" content="bPiFySR-z9YJEg-wLiY9VPKVibkPP1yxHCgRW8aoky8" />
 <link rel="canonical" href="https://tomasezzat2012-tech.github.io/">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -22,20 +18,11 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Codex">
 <meta property="og:locale" content="ar_AR">
-<meta property="og:title" content="Codex | تصميم وتطوير التطبيقات">
-<meta property="og:description" content="نحوّل فكرتك إلى تطبيق ناجح. تسليم من 1 إلى 10 أيام حسب الباقة وأسعار من 500 جنيه.">
+<meta property="og:title" content="Codex | برمجة وتصميم تطبيقات الموبايل">
+<meta property="og:description" content="نحوّل فكرتك إلى تطبيق ناجح. تسليم من 1 إلى 10 أيام وأسعار من 500 جنيه.">
 <meta property="og:url" content="https://tomasezzat2012-tech.github.io/">
 <meta property="og:image" content="https://tomasezzat2012-tech.github.io/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Codex",
-  "alternateName": ["كودكس", "Codex Apps"],
-  "url": "https://tomasezzat2012-tech.github.io/"
-}
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,7 +32,8 @@
   "url": "https://tomasezzat2012-tech.github.io/",
   "logo": "https://tomasezzat2012-tech.github.io/icon-512.png",
   "image": "https://tomasezzat2012-tech.github.io/og-image.png",
-  "description": "تصميم وتطوير تطبيقات الموبايل والويب بجودة عالية وتسليم سريع.",
+  "description": "برمجة وتصميم تطبيقات الموبايل بجودة عالية وتسليم سريع.",
+  "email": "tomasezzat2012@gmail.com",
   "telephone": "+201223073828",
   "areaServed": "EG",
   "priceRange": "500-950 EGP"
@@ -53,34 +41,44 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"><style>.reveal{opacity:1;transform:none}</style></noscript>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#070b18;--bg2:#0c1226;--card:rgba(20,27,52,.6);--line:rgba(120,140,255,.14);
-  --text:#eef1fb;--muted:#9aa5c7;--a:#6c8cff;--b:#22d3a6;--c:#b36bff;
+  --bg:#05060f;--bg2:#0a0e22;--card:rgba(22,28,56,.55);--card2:rgba(28,35,68,.7);--line:rgba(140,160,255,.16);
+  --text:#f3f5ff;--muted:#9aa5c7;--a:#7c9bff;--b:#2fe0ac;--c:#c285ff;--status:#2fe0ac;
   --grad:linear-gradient(100deg,var(--a),var(--b));
-  --radius:20px
+  --grad2:linear-gradient(135deg,var(--a),var(--c) 55%,var(--b));
+  --glow:0 0 0 1px rgba(140,160,255,.18),0 30px 60px -20px rgba(80,100,255,.35);
+  --radius:22px
 }
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{font-family:'Cairo',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;overflow-x:hidden}
+body{font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;overflow-x:hidden}
+h1,h2,h3,.logo{font-family:'El Messiri',system-ui,sans-serif}
 a{color:inherit;text-decoration:none}
 .container{max-width:1160px;margin:auto;padding:0 22px}
 .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* شريط التقدم */
-#progress{position:fixed;top:0;right:0;height:3px;width:100%;transform:scaleX(0);transform-origin:right;background:var(--grad);z-index:100;will-change:transform}
+#progress{position:fixed;top:0;right:0;height:3px;width:0;background:var(--grad);z-index:100}
 
 /* خلفية الأورورا */
-.aurora{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(640px 520px at 92% -4%,rgba(108,140,255,.2),transparent 70%),radial-gradient(560px 480px at 4% 104%,rgba(34,211,166,.13),transparent 70%)}
+.aurora{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.3;animation:float 18s ease-in-out infinite}
+.aurora i:nth-child(1){width:460px;height:460px;background:var(--a);top:-120px;right:-100px}
+.aurora i:nth-child(2){width:400px;height:400px;background:var(--b);bottom:-140px;left:-100px;animation-delay:-6s;opacity:.18}
+.aurora i:nth-child(3){width:320px;height:320px;background:var(--c);top:45%;left:40%;animation-delay:-11s;opacity:.14}
+@media(max-width:700px){.aurora i{animation:none;filter:blur(60px)}}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(60px,40px) scale(1.12)}66%{transform:translate(-50px,70px) scale(.92)}}
 .grid-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
   background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 20%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 50% 20%,#000 20%,transparent 70%);opacity:.5}
 
 /* الهيدر */
 header{position:fixed;top:0;right:0;left:0;z-index:50;transition:.3s}
-header.scrolled{background:rgba(7,11,24,.95);border-bottom:1px solid var(--line)}
+header.scrolled{background:rgba(7,11,24,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;justify-content:space-between;height:70px}
 .logo{font-weight:900;font-size:1.5rem;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
 .logo b{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--grad);color:#06101f;font-size:1.1rem}
@@ -89,21 +87,23 @@ nav ul a{color:var(--muted);font-weight:600;padding:8px 16px;border-radius:999px
 nav ul a:hover,nav ul a.active{color:var(--text);background:rgba(108,140,255,.14)}
 .burger{display:none;background:none;border:0;color:var(--text);font-size:1.7rem;cursor:pointer}
 
-.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 30px;border-radius:999px;font-weight:700;font-size:1rem;font-family:inherit;border:0;cursor:pointer;color:#06101f;background:var(--grad);overflow:hidden;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 18px rgba(108,140,255,.22)}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(108,140,255,.32)}
-a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--b);outline-offset:3px}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;border-radius:999px;font-weight:800;font-size:1rem;font-family:inherit;border:0;cursor:pointer;color:#06101f;background:var(--grad2);background-size:180% 180%;overflow:hidden;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,background-position .6s;box-shadow:0 10px 34px -6px rgba(124,155,255,.45)}
+.btn:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 18px 48px -8px rgba(47,224,172,.4);background-position:60% 40%}
+.btn::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);transition:.6s}
+.btn:hover::after{left:140%}
 .btn.ghost{background:transparent;color:var(--text);border:1px solid rgba(140,160,255,.35);box-shadow:none}
 .btn.ghost:hover{background:rgba(108,140,255,.12)}
-.btn.wa{background:linear-gradient(100deg,#25d366,#12a150);color:#fff;box-shadow:0 6px 18px rgba(37,211,102,.25)}
-.btn.gm{background:linear-gradient(100deg,#ff6a5c,#d93025);color:#fff;box-shadow:0 6px 18px rgba(217,48,37,.25)}
+.btn.wa{background:linear-gradient(100deg,#25d366,#12a150);color:#fff;box-shadow:0 8px 30px rgba(37,211,102,.3)}
+.btn.gm{background:linear-gradient(100deg,#ff6a5c,#d93025);color:#fff;box-shadow:0 8px 30px rgba(217,48,37,.3)}
 
 /* الهيرو */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:120px 0 80px}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px}
+#particles{position:absolute;inset:0;width:100%;height:100%;z-index:0}
 .hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
-.badge{display:inline-flex;align-items:center;gap:10px;padding:7px 18px;border-radius:999px;border:1px solid var(--line);background:rgba(20,27,52,.8);color:var(--muted);font-size:.92rem;margin-bottom:22px}
-.badge span{width:8px;height:8px;border-radius:50%;background:var(--b);animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{50%{opacity:.35}}
-.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.35;margin-bottom:18px}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:7px 18px;border-radius:999px;border:1px solid var(--line);background:rgba(20,27,52,.6);color:var(--muted);font-size:.92rem;margin-bottom:22px}
+.badge span{width:8px;height:8px;border-radius:50%;background:var(--b);box-shadow:0 0 0 0 rgba(34,211,166,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,211,166,0)}100%{box-shadow:0 0 0 0 rgba(34,211,166,0)}}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4.1rem);font-weight:900;line-height:1.28;letter-spacing:-.5px;margin-bottom:18px;text-shadow:0 2px 40px rgba(124,155,255,.25)}
 .typed{border-left:3px solid var(--b);padding-left:6px;animation:blink 1s step-end infinite}
 @keyframes blink{50%{border-color:transparent}}
 .hero p.lead{color:var(--muted);font-size:1.15rem;max-width:560px;margin-bottom:32px}
@@ -111,8 +111,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 
 /* مجسم الموبايل */
 .phone-wrap{position:relative;display:grid;place-items:center;perspective:1200px}
-.phone{position:relative;width:260px;height:520px;border-radius:42px;padding:12px;background:linear-gradient(160deg,#252f5a,#0f1530);border:1px solid rgba(140,160,255,.35);box-shadow:0 30px 60px rgba(0,0,0,.5);animation:phone 7s ease-in-out infinite;transform:rotateY(-10deg) rotateX(4deg)}
-@keyframes phone{0%,100%{transform:rotateY(-10deg) rotateX(4deg) translateY(0)}50%{transform:rotateY(-4deg) rotateX(2deg) translateY(-12px)}}
+.phone{position:relative;width:260px;height:520px;border-radius:42px;padding:12px;background:linear-gradient(160deg,#252f5a,#0f1530);border:1px solid rgba(140,160,255,.35);box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 80px rgba(108,140,255,.25);animation:phone 7s ease-in-out infinite;transform-style:preserve-3d}
+@keyframes phone{0%,100%{transform:rotateY(-14deg) rotateX(6deg) translateY(0)}50%{transform:rotateY(10deg) rotateX(-4deg) translateY(-18px)}}
 .screen{position:relative;width:100%;height:100%;border-radius:32px;background:linear-gradient(180deg,#121a3a,#0a1028);overflow:hidden;padding:44px 16px 16px}
 .notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:84px;height:22px;border-radius:14px;background:#04070f}
 .ui-title{height:12px;width:55%;border-radius:8px;background:var(--grad);margin-bottom:14px}
@@ -126,27 +126,32 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 .ui-bars i{flex:1;border-radius:6px 6px 0 0;background:var(--grad);animation:bar 2.4s ease-in-out infinite}
 .ui-bars i:nth-child(1){height:40%}.ui-bars i:nth-child(2){height:70%;animation-delay:.2s}.ui-bars i:nth-child(3){height:50%;animation-delay:.4s}.ui-bars i:nth-child(4){height:90%;animation-delay:.6s}.ui-bars i:nth-child(5){height:60%;animation-delay:.8s}
 @keyframes bar{50%{transform:scaleY(.6);transform-origin:bottom}}
+.chip{position:absolute;padding:10px 16px;border-radius:14px;background:rgba(20,27,52,.85);border:1px solid var(--line);backdrop-filter:blur(8px);font-weight:700;font-size:.9rem;box-shadow:0 12px 30px rgba(0,0,0,.4);animation:chip 5s ease-in-out infinite}
+.chip.c1{top:60px;right:-10px}.chip.c2{bottom:90px;left:-14px;animation-delay:-2s}.chip.c3{bottom:20px;right:10px;animation-delay:-3.5s}
+@keyframes chip{50%{transform:translateY(-14px)}}
+
 /* شريط التقنيات */
 .marquee{border-block:1px solid var(--line);background:rgba(12,18,38,.6);overflow:hidden;padding:18px 0}
 .track{display:flex;gap:56px;width:max-content;animation:scroll 30s linear infinite}
 .marquee:hover .track{animation-play-state:paused}
 .track span{color:var(--muted);font-weight:700;font-size:1.2rem;white-space:nowrap}
-.track span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--b);opacity:.7;margin-left:14px;vertical-align:middle}
+.track span::before{content:"✦";color:var(--b);margin-left:14px}
 @keyframes scroll{to{transform:translateX(50%)}}
 
-section{padding:92px 0}
-[hidden]{display:none!important}
+section{padding:96px 0}
 .eyebrow{display:block;text-align:center;color:var(--b);font-weight:700;letter-spacing:1px;margin-bottom:6px}
 h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;text-align:center;margin-bottom:10px}
-h2 .grad-text{background:none;color:var(--b)}
 .sub{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 52px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
 
 /* البطاقات */
-.card{position:relative;background:rgba(18,25,48,.85);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;transition:border-color .25s,background .25s;overflow:hidden}
-.card:hover{border-color:rgba(108,140,255,.5);background:rgba(22,30,58,.92)}
-.icon{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:rgba(108,140,255,.12);border:1px solid var(--line);margin-bottom:18px}
-.icon svg,.ic{width:26px;height:26px;fill:none;stroke:var(--b);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.card{position:relative;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--radius);padding:34px 28px;backdrop-filter:blur(14px);box-shadow:var(--glow);transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s;transform-style:preserve-3d;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(124,155,255,.25),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card::after{content:"";position:absolute;inset:0;border-radius:var(--radius);padding:1px;background:var(--grad2);-webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover{border-color:transparent;transform:translateY(-6px)}
+.card:hover::before{opacity:1}
+.card:hover::after{opacity:1}
+.icon{display:grid;place-items:center;width:58px;height:58px;border-radius:16px;font-size:1.7rem;background:linear-gradient(135deg,rgba(108,140,255,.25),rgba(34,211,166,.18));border:1px solid var(--line);margin-bottom:18px}
 .card h3{font-size:1.2rem;margin-bottom:8px}
 .card p{color:var(--muted);font-size:.97rem}
 
@@ -155,25 +160,15 @@ h2 .grad-text{background:none;color:var(--b)}
 .step{counter-increment:s}
 .step::after{content:"0" counter(s);position:absolute;top:14px;left:20px;font-size:3.2rem;font-weight:900;color:rgba(108,140,255,.12)}
 
-/* عنّا والشروط */
-.about-box{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;max-width:860px;margin:auto;padding:36px;border-radius:26px;background:rgba(18,25,48,.85);border:1px solid var(--line)}
-.about-logo{width:130px;height:130px;border-radius:30px;display:grid;place-items:center;background:var(--grad);color:#06101f;font-weight:900;font-size:1.7rem;letter-spacing:.5px;direction:ltr;box-shadow:0 10px 26px rgba(108,140,255,.25)}
-.about-box h3{font-size:1.4rem;margin-bottom:8px}
-.about-box p{color:var(--muted);margin-bottom:14px}
-.about-links{display:flex;flex-wrap:wrap;gap:12px}
-.about-links a{padding:10px 18px;border-radius:12px;border:1px solid var(--line);background:rgba(8,12,28,.6);font-weight:600;direction:ltr;transition:.25s}
-.about-links a:hover{border-color:var(--a)}
-@media(max-width:700px){.about-box{grid-template-columns:1fr;text-align:center;padding:28px 20px;justify-items:center}.about-links{justify-content:center}}
-
 /* لماذا نحن */
 .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
 .why .item{text-align:center;padding:28px 18px;border-radius:var(--radius);border:1px dashed rgba(140,160,255,.28)}
 .why .item strong{display:block;font-size:1.15rem;margin:8px 0 4px}
 .why .item span{color:var(--muted);font-size:.93rem}
-.why .item em{display:block;font-style:normal}.why .item .ic{width:30px;height:30px}
+.why .item em{font-style:normal;font-size:2rem}
 
 /* التواصل */
-.contact-box{max-width:680px;margin:auto;padding:40px 36px;border-radius:26px;background:rgba(18,25,48,.88);border:1px solid var(--line);box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.contact-box{max-width:680px;margin:auto;padding:40px 36px;border-radius:26px;background:var(--card);border:1px solid var(--line);backdrop-filter:blur(14px);box-shadow:0 30px 80px rgba(0,0,0,.35)}
 form{display:grid;gap:16px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px;color:var(--muted)}
@@ -182,23 +177,21 @@ select option{background:#0c1226}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--a);box-shadow:0 0 0 4px rgba(108,140,255,.18)}
 .send{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
 .hint{text-align:center;color:var(--muted);font-size:.85rem;margin-top:4px}
-select{color-scheme:dark;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%239aa5c7' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 14px center;padding-left:38px}
-select option{background:#0f1530;color:#eef1fb}
-.main-send{width:100%;margin:6px 0 14px}.main-send[hidden]{display:none}.main-send:disabled{opacity:.6;cursor:wait}
 #toast{position:fixed;bottom:90px;left:50%;transform:translate(-50%,30px);background:#12182f;border:1px solid var(--line);padding:12px 22px;border-radius:14px;opacity:0;pointer-events:none;transition:.35s;z-index:200;font-weight:600}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 
 footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--muted);font-size:.92rem}
 
 /* زر واتساب عائم */
-.fab{position:fixed;bottom:22px;left:22px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;box-shadow:0 8px 22px rgba(37,211,102,.4)}
+.fab{position:fixed;bottom:22px;left:22px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;box-shadow:0 10px 30px rgba(37,211,102,.45);animation:pulseG 2.5s infinite}
 .fab svg{width:30px;height:30px;fill:#fff}
+@keyframes pulseG{70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 
 /* الأسعار */
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;align-items:stretch}
 .plan{display:flex;flex-direction:column}
 .plan .tag{align-self:flex-start;font-size:.8rem;font-weight:700;padding:4px 14px;border-radius:999px;background:rgba(108,140,255,.15);color:var(--a);margin-bottom:14px}
-.plan.hot{border-color:rgba(34,211,166,.55)}
+.plan.hot{border-color:rgba(34,211,166,.6);box-shadow:0 0 60px rgba(34,211,166,.14)}
 .plan.hot .tag{background:var(--grad);color:#06101f}
 .plan .price{font-size:2.6rem;font-weight:900;line-height:1.2;margin:6px 0 2px}
 .plan .price small{font-size:1rem;color:var(--muted);font-weight:600}
@@ -209,7 +202,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:v
 
 /* الأسئلة الشائعة */
 .faq{max-width:760px;margin:auto;display:grid;gap:14px}
-.faq details{background:rgba(18,25,48,.85);border:1px solid var(--line);border-radius:16px;padding:0 22px;transition:border-color .25s}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0 22px;backdrop-filter:blur(10px);transition:border-color .3s}
 .faq details[open]{border-color:rgba(108,140,255,.5)}
 .faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .faq summary::-webkit-details-marker{display:none}
@@ -218,7 +211,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:v
 .faq details p{color:var(--muted);padding-bottom:18px}
 
 /* مطر الأكواد والأرقام */
-#rain{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.55}
+#rain{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.32}
 
 /* سطر الكتابة بتاع الكود */
 .codeline{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;padding:10px 20px;border-radius:12px;background:rgba(6,10,24,.75);border:1px solid var(--line);font-family:'Courier New',ui-monospace,monospace;font-size:1.1rem;font-weight:700;color:var(--b);direction:rtl;min-height:48px}
@@ -226,31 +219,13 @@ footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:v
 .codeline .cur{display:inline-block;width:10px;height:1.2em;background:var(--b);animation:blink2 .9s step-end infinite}
 @keyframes blink2{50%{opacity:0}}
 
-/* مشاريعنا */
-.projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
-.card.proj{padding:0;display:flex;flex-direction:column;overflow:hidden}
-.proj .pic{aspect-ratio:16/10;display:grid;place-items:center;overflow:hidden;font-size:3.4rem;font-weight:900;color:rgba(255,255,255,.85);background:linear-gradient(135deg,rgba(108,140,255,.55),rgba(34,211,166,.4))}
-.proj .pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
-.card.proj:hover .pic img{transform:scale(1.04)}
-.proj .pbody{padding:22px 24px 24px;display:flex;flex-direction:column;gap:6px;flex:1}
-.proj .cat{align-self:flex-start;font-size:.8rem;font-weight:700;padding:3px 12px;border-radius:999px;background:rgba(108,140,255,.16);color:var(--a)}
-.proj h3{font-size:1.2rem}
-.proj p{color:var(--muted);font-size:.95rem;flex:1}
-.proj .go{margin-top:10px;font-weight:700;color:var(--b)}
-.proj-msg{grid-column:1/-1;text-align:center;color:var(--muted);padding:44px 20px;border:1px dashed rgba(140,160,255,.3);border-radius:var(--radius)}
-
 /* ظهور عند التمرير */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}
-.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
 
-/* الأجهزة اللمس والموبايل */
-@media(max-width:900px),(pointer:coarse){
-  .grid-bg{display:none}
-}
 @media(max-width:900px){
   .hero .container{grid-template-columns:1fr;text-align:center}
-  section{padding:66px 0}
   .hero p.lead{margin-inline:auto}.actions{justify-content:center}
   .phone-wrap{margin-top:30px}
   nav ul{position:absolute;top:70px;right:0;left:0;flex-direction:column;background:rgba(7,11,24,.97);padding:12px 20px 20px;border-bottom:1px solid var(--line);display:none}
@@ -264,33 +239,11 @@ footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:v
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
-
-/* إصلاح: منع الصفحة من الاتساع بسبب الشريط المتحرك (كان بيخفي المحتوى على بعض الموبايلات) */
-html{overflow-x:hidden;max-width:100%}
-body{overflow-x:hidden;max-width:100%;position:relative}
-.marquee{overflow:hidden;max-width:100%;contain:paint}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-<symbol id="i-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
-<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
-<symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></symbol>
-<symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></symbol>
-<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
-<symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></symbol>
-<symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
-<symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></symbol>
-<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
-<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
-<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
-<symbol id="i-card" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></symbol>
-<symbol id="i-box" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></symbol>
-<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></symbol>
-<symbol id="i-edit" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></symbol>
-</defs></svg>
 <div id="progress"></div>
-<div class="aurora"></div>
+
 <div class="grid-bg"></div>
 <canvas id="rain"></canvas>
 
@@ -301,21 +254,22 @@ body{overflow-x:hidden;max-width:100%;position:relative}
       <ul id="menu">
         <li><a href="#home" class="active">الرئيسية</a></li>
         <li><a href="#services">خدماتنا</a></li>
-        <li><a href="#projects">أعمالنا</a></li>
         <li><a href="#process">طريقة العمل</a></li>
-        <li><a href="#about">عنّا</a></li>
+        <li><a href="#why">لماذا نحن</a></li>
+        <li><a href="#projects">مشاريعنا</a></li>
         <li><a href="#pricing">الأسعار</a></li>
         <li><a href="#faq">الأسئلة</a></li>
         <li><a href="#contact">تواصل معنا</a></li>
       </ul>
       <a href="#contact" class="btn">ابدأ مشروعك</a>
-      <button class="burger" id="burger" aria-label="القائمة" aria-expanded="false" aria-controls="menu">☰</button>
+      <button class="burger" id="burger" aria-label="القائمة">☰</button>
     </nav>
   </div>
 </header>
 
 <main>
   <section class="hero" id="home">
+    <canvas id="particles"></canvas>
     <div class="container">
       <div>
         <div class="codeline"><span class="pr">&gt;_</span><span id="codeTyped"></span><i class="cur"></i></div>
@@ -339,37 +293,32 @@ body{overflow-x:hidden;max-width:100%;position:relative}
             <div class="ui-bars"><i></i><i></i><i></i><i></i><i></i></div>
           </div>
         </div>
+        <div class="chip c1">⚡ أداء سريع</div>
+        <div class="chip c2">🔒 آمن</div>
+        <div class="chip c3">🎨 تصميم عصري</div>
       </div>
     </div>
   </section>
 
   <div class="marquee" aria-hidden="true">
     <div class="track">
-      <span>تطبيقات موبايل</span><span>مواقع ويب</span><span>تصميم UI/UX</span><span>متاجر إلكترونية</span><span>لوحات تحكم</span><span>ربط خدمات</span><span>دعم فني</span>
-      <span>تطبيقات موبايل</span><span>مواقع ويب</span><span>تصميم UI/UX</span><span>متاجر إلكترونية</span><span>لوحات تحكم</span><span>ربط خدمات</span><span>دعم فني</span>
+      <span>Kotlin</span><span>Jetpack Compose</span><span>Flutter</span><span>Firebase</span><span>Figma</span><span>REST APIs</span><span>Room DB</span>
+      <span>Kotlin</span><span>Jetpack Compose</span><span>Flutter</span><span>Firebase</span><span>Figma</span><span>REST APIs</span><span>Room DB</span>
     </div>
   </div>
+<div class="aurora"><i></i><i></i><i></i></div>
 
   <section id="services">
     <div class="container">
       <span class="eyebrow reveal">خدماتنا</span>
-      <h2 class="reveal">بنبني لك <span class="grad-text">اللي محتاجه</span></h2>
-      <p class="sub reveal">من التصميم للتطوير للدعم بعد التسليم</p>
+      <h2 class="reveal">كل ما تحتاجه لإطلاق <span class="grad-text">منتجك الرقمي</span></h2>
+      <p class="sub reveal">حلول متكاملة من التصميم إلى التطوير والدعم</p>
       <div class="grid">
-        <div class="card reveal"><div class="icon"><svg><use href="#i-mobile"/></svg></div><h3>تطبيقات الموبايل</h3><p>تطبيقات بتشتغل على Android و iOS، بواجهة بسيطة وسريعة.</p></div>
-        <div class="card reveal d1"><div class="icon"><svg><use href="#i-globe"/></svg></div><h3>تطبيقات الويب</h3><p>مواقع ومنصات ويب بتظهر صح على الموبايل والكمبيوتر وتناسب نشاطك.</p></div>
-        <div class="card reveal d2"><div class="icon"><svg><use href="#i-pen"/></svg></div><h3>تصميم UI/UX</h3><p>واجهات واضحة وسهلة الاستخدام، متصممة حوالين اللي مستخدمك محتاجه.</p></div>
-        <div class="card reveal d3"><div class="icon"><svg><use href="#i-wrench"/></svg></div><h3>الدعم والصيانة</h3><p>دعم فني بعد التسليم، وتعديلات وتطوير لما المشروع يكبر.</p></div>
+        <div class="card reveal"><div class="icon">📱</div><h3>تطبيقات الموبايل</h3><p>تطبيقات بتشتغل على Android و iOS، بواجهة بسيطة وسريعة.</p></div>
+        <div class="card reveal d1"><div class="icon">🎨</div><h3>تصميم UI/UX</h3><p>واجهات واضحة وسهلة الاستخدام، متصممة حوالين اللي مستخدمك محتاجه.</p></div>
+        <div class="card reveal d2"><div class="icon">🖥️</div><h3>لوحات تحكم</h3><p>لوحة تحكم (Dashboard) تدير بيها بيانات تطبيقك بسهولة.</p></div>
+        <div class="card reveal d3"><div class="icon">⚙️</div><h3>الدعم والصيانة</h3><p>دعم فني بعد التسليم، وتعديلات وتطوير لما المشروع يكبر.</p></div>
       </div>
-    </div>
-  </section>
-
-    <section id="projects" hidden>
-    <div class="container">
-      <span class="eyebrow reveal">أعمالنا</span>
-      <h2 class="reveal">مشاريع <span class="grad-text">اشتغلنا عليها</span></h2>
-      <p class="sub reveal">نماذج من شغلنا، وبتتحدّث أول بأول.</p>
-      <div class="projects" id="projects-grid"><div class="proj-msg">بنجهّز المشاريع...</div></div>
     </div>
   </section>
 
@@ -379,10 +328,10 @@ body{overflow-x:hidden;max-width:100%;position:relative}
       <h2 class="reveal">4 خطوات من الفكرة <span class="grad-text">للتسليم</span></h2>
       <p class="sub reveal">خطوات واضحة وتواصل مستمر في كل مرحلة</p>
       <div class="steps">
-        <div class="card step reveal"><div class="icon"><svg><use href="#i-bulb"/></svg></div><h3>الفكرة والتحليل</h3><p>نفهم هدفك وجمهورك ونحدد المتطلبات والميزانية.</p></div>
-        <div class="card step reveal d1"><div class="icon"><svg><use href="#i-layout"/></svg></div><h3>التصميم</h3><p>نجهز تصميمات تفاعلية توافق عليها قبل بدء البرمجة.</p></div>
-        <div class="card step reveal d2"><div class="icon"><svg><use href="#i-code"/></svg></div><h3>التطوير والاختبار</h3><p>نبرمج ونجرّب كل جزء قبل ما نسلّمه.</p></div>
-        <div class="card step reveal d3"><div class="icon"><svg><use href="#i-check"/></svg></div><h3>التسليم والدعم</h3><p>نسلّم لك الشغل جاهز ونتابع معاك للتأكد إن كل حاجة شغالة.</p></div>
+        <div class="card step reveal"><div class="icon">💡</div><h3>الفكرة والتحليل</h3><p>نفهم هدفك وجمهورك ونحدد المتطلبات والميزانية.</p></div>
+        <div class="card step reveal d1"><div class="icon">✏️</div><h3>التصميم</h3><p>نجهز تصميمات تفاعلية توافق عليها قبل بدء البرمجة.</p></div>
+        <div class="card step reveal d2"><div class="icon">💻</div><h3>التطوير والاختبار</h3><p>نبرمج ونجرّب كل جزء قبل ما نسلّمه.</p></div>
+        <div class="card step reveal d3"><div class="icon">🚀</div><h3>التسليم والدعم</h3><p>نسلّم لك الشغل جاهز ونتابع معاك للتأكد إن كل حاجة شغالة.</p></div>
       </div>
     </div>
   </section>
@@ -390,13 +339,29 @@ body{overflow-x:hidden;max-width:100%;position:relative}
   <section id="why">
     <div class="container">
       <span class="eyebrow reveal">لماذا Codex</span>
-      <h2 class="reveal">ليه <span class="grad-text">تشتغل معانا</span></h2>
-      <p class="sub reveal">بنشتغل بوضوح من أول يوم لحد التسليم</p>
+      <h2 class="reveal">شريك تقني <span class="grad-text">تقدر تعتمد عليه</span></h2>
+      <p class="sub reveal">بنشتغل بشفافية والتزام وبنركز على نتيجة تفرق مع شغلك</p>
       <div class="why">
-        <div class="item reveal"><em><svg class="ic"><use href="#i-target"/></svg></em><strong>تركيز على هدفك</strong><span>بنسمعك الأول ونبني اللي يخدم نشاطك</span></div>
-        <div class="item reveal d1"><em><svg class="ic"><use href="#i-clock"/></svg></em><strong>التزام بالمواعيد</strong><span>تسليم من 1 إلى 10 أيام حسب الباقة</span></div>
-        <div class="item reveal d2"><em><svg class="ic"><use href="#i-chat"/></svg></em><strong>تواصل مستمر</strong><span>تحديثات منتظمة طول فترة العمل</span></div>
-        <div class="item reveal d3"><em><svg class="ic"><use href="#i-box"/></svg></em><strong>الكود بتاعك</strong><span>بنسلّمك الكود بعد الدفع وتعدّل عليه براحتك</span></div>
+        <div class="item reveal"><em>🎯</em><strong>تركيز على هدفك</strong><span>نبني اللي يخدم نشاطك فعلاً</span></div>
+        <div class="item reveal d1"><em>⏱️</em><strong>التزام بالمواعيد</strong><span>تسليم من 1 إلى 10 أيام حسب الباقة</span></div>
+        <div class="item reveal d2"><em>💬</em><strong>تواصل مستمر</strong><span>تحديثات منتظمة طول فترة العمل</span></div>
+        <div class="item reveal d3"><em>🛡️</em><strong>الكود بتاعك</strong><span>بنسلّمك الكود بعد الدفع وتعدّل عليه براحتك</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <span class="eyebrow reveal">مشاريعنا</span>
+      <h2 class="reveal">من شغلنا <span class="grad-text">الحقيقي</span></h2>
+      <p class="sub reveal">نماذج فعلية من تطبيقات اتعملت وبتشتغل دلوقتي</p>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+        <div class="card reveal">
+          <div class="icon">⚖️</div>
+          <h3>LawyerDiary</h3>
+          <p>تطبيق أندرويد لإدارة مواعيد وقضايا المحامين، بهوية بصرية كحلي وذهبي، ونظام تحديثات تلقائي للعميل.</p>
+          <a href="https://tomasezzat2012-tech.github.io/Important-/" target="_blank" rel="noopener" class="btn ghost" style="margin-top:14px">عرض التطبيق</a>
+        </div>
       </div>
     </div>
   </section>
@@ -404,16 +369,17 @@ body{overflow-x:hidden;max-width:100%;position:relative}
   <section id="about">
     <div class="container">
       <span class="eyebrow reveal">عنّا</span>
-      <h2 class="reveal">مين <span class="grad-text">وراء Codex</span></h2>
-      <div class="about-box reveal">
-        <div class="about-logo" role="img" aria-label="شعار Codex">Codex</div>
-        <div>
-          <h3>أهلاً، أنا صاحب Codex</h3>
-          <p>بصمم وببرمج تطبيقات موبايل ومواقع ويب بأفكار إبداعية وحلول تقنية حديثة، وبشتغل معاك خطوة بخطوة من الفكرة لحد التسليم والدعم بعده.</p>
-          <div class="about-links">
-            <a href="#contact" id="mailBtn" rel="noopener">راسلنا عبر Gmail</a>
-            <a href="#contact" id="waBtn" target="_blank" rel="noopener">تواصل عبر واتساب</a>
-          </div>
+      <h2 class="reveal">مين وراء <span class="grad-text">Codex</span></h2>
+      <div class="card reveal" style="max-width:640px;margin:0 auto;text-align:center">
+        <h3>أهلاً، أنا Tomas Ezzat</h3>
+        <p>مبرمج تطبيقات موبايل، بشتغل من أول الفكرة لحد التطبيق الشغّال فعليًا على جهازك. متاح خدمة 24 ساعة للمساعدة والدعم الفني والصيانة، وبأقل الأسعار في السوق.</p>
+        <p style="margin-top:14px;color:var(--muted);font-size:.95rem;line-height:2">
+          📞 01223073828 &nbsp;|&nbsp; 01288323592<br>
+          📧 tomasezzat2012@gmail.com
+        </p>
+        <div class="actions" style="justify-content:center;margin-top:18px">
+          <a href="#contact" class="btn gm">راسلنا عبر Gmail</a>
+          <a href="#contact" class="btn wa">تواصل عبر واتساب</a>
         </div>
       </div>
     </div>
@@ -434,7 +400,7 @@ body{overflow-x:hidden;max-width:100%;position:relative}
             <li>متجاوب مع كل الشاشات</li>
             <li>تسليم من 1 إلى 3 أيام</li>
           </ul>
-          <a href="#contact" class="btn ghost" data-plan="1">اطلب الآن</a>
+          <a href="#contact" class="btn ghost">اطلب الآن</a>
         </div>
         <div class="card plan hot reveal d1">
           <span class="tag">الأكثر طلباً</span>
@@ -445,7 +411,7 @@ body{overflow-x:hidden;max-width:100%;position:relative}
             <li>حركات وتأثيرات على الواجهة</li>
             <li>تسليم من 3 إلى 6 أيام</li>
           </ul>
-          <a href="#contact" class="btn" data-plan="2">اطلب الآن</a>
+          <a href="#contact" class="btn">اطلب الآن</a>
         </div>
         <div class="card plan reveal d2">
           <span class="tag">متقدم</span>
@@ -456,24 +422,10 @@ body{overflow-x:hidden;max-width:100%;position:relative}
             <li>تصميم UI/UX كامل</li>
             <li>تسليم من 6 إلى 10 أيام</li>
           </ul>
-          <a href="#contact" class="btn ghost" data-plan="3">اطلب الآن</a>
+          <a href="#contact" class="btn ghost">اطلب الآن</a>
         </div>
       </div>
       <p class="note reveal">السعر النهائي بيتحدد حسب تفاصيل مشروعك. ابعتلنا فكرتك وهنرد عليك بعرض واضح.</p>
-    </div>
-  </section>
-
-  <section id="terms">
-    <div class="container">
-      <span class="eyebrow reveal">الشروط</span>
-      <h2 class="reveal">الدفع والتسليم <span class="grad-text">والدعم</span></h2>
-      <p class="sub reveal">كل حاجة واضحة من البداية</p>
-      <div class="grid">
-        <div class="card reveal"><div class="icon"><svg><use href="#i-card"/></svg></div><h3>الدفع</h3><p>بعد انتهاء الشغل، الدفع بيتم قبل التسليم أو بعده بطريقة مضمونة بنتفق عليها من الأول.</p></div>
-        <div class="card reveal d1"><div class="icon"><svg><use href="#i-box"/></svg></div><h3>تسليم الكود</h3><p>الكود المصدري بيتسلّم بعد استلام المبلغ كامل.</p></div>
-        <div class="card reveal d2"><div class="icon"><svg><use href="#i-help"/></svg></div><h3>دعم فني</h3><p>بعد التسليم الدعم الفني متاح لو حصلت أي مشكلة.</p></div>
-        <div class="card reveal d3"><div class="icon"><svg><use href="#i-edit"/></svg></div><h3>التعديلات</h3><p>أي تغيير في الكود بعد التسليم بـ 50 جنيه فقط.</p></div>
-      </div>
     </div>
   </section>
 
@@ -484,28 +436,28 @@ body{overflow-x:hidden;max-width:100%;position:relative}
       <p class="sub reveal">لو سؤالك مش هنا كلمنا على واتساب</p>
       <div class="faq reveal">
         <details>
-          <summary>بتكلف كام؟</summary>
-          <p>الأسعار من 500 إلى 950 جنيه حسب حجم المشروع والميزات المطلوبة. بعد ما تبعتلنا فكرتك بنحدد لك السعر النهائي.</p>
+          <summary>لازم يكون عندي فكرة جاهزة بالكامل؟</summary>
+          <p>لأ، تقدر تيجيلي بفكرة مبدئية بس وهساعدك تطورها لحد ما تبقى تطبيق متكامل.</p>
         </details>
         <details>
-          <summary>المشروع بياخد وقت قد إيه؟</summary>
-          <p>حسب الباقة: الأساسي من 1 إلى 3 أيام، المتوسط من 3 إلى 6 أيام، والمتقدم من 6 إلى 10 أيام.</p>
+          <summary>التطبيق هيشتغل على أندرويد وآيفون الاتنين؟</summary>
+          <p>بيعتمد على التقنية المستخدمة في مشروعك، وبنحددها مع بعض حسب احتياجك من أول استشارة.</p>
         </details>
         <details>
-          <summary>هل بتسلّموا الكود المصدري؟</summary>
-          <p>أيوه، بنسلّم الكود المصدري بعد استلام المبلغ كامل.</p>
+          <summary>هل أقدر أشوف تصميم أو نموذج قبل الدفع؟</summary>
+          <p>أيوه، قبل أي دفع بنوريك تصميم أو نموذج أولي للمشروع عشان توافق عليه الأول.</p>
         </details>
         <details>
-          <summary>الدفع بيتم إزاي؟</summary>
-          <p>بعد ما الشغل يخلص، الدفع بيتم قبل التسليم أو بعده بطريقة مضمونة بنتفق عليها من الأول.</p>
+          <summary>إيه الفرق بين تطبيق كامل وتصميم UI/UX بس؟</summary>
+          <p>تصميم UI/UX هو شكل وتجربة استخدام التطبيق بس (زي مخطط)، أما التطبيق الكامل فهو الشغل البرمجي اللي يخلّيه يشتغل فعليًا.</p>
         </details>
         <details>
-          <summary>لو حصلت مشكلة بعد التسليم؟</summary>
-          <p>الدعم الفني متاح بعد التسليم، كلمنا وهنساعدك.</p>
+          <summary>ممكن أطلب تعديلات أثناء التنفيذ مش بس بعده؟</summary>
+          <p>أكيد، التواصل مستمر طول فترة التنفيذ، فأي ملاحظة بناخدها في الاعتبار أول بأول.</p>
         </details>
         <details>
-          <summary>لو عايز أعدّل حاجة في الكود بعد التسليم؟</summary>
-          <p>أي تغيير أو تعديل في الكود بعد التسليم بـ 50 جنيه فقط.</p>
+          <summary>هل في دعم أو صيانة بعد التسليم؟</summary>
+          <p>أيوه، وكمان بتقدر تطلب أي تعديل تحبه مجانًا خلال أسبوع من تاريخ التسليم.</p>
         </details>
         <details>
           <summary>أبدأ إزاي؟</summary>
@@ -538,22 +490,12 @@ body{overflow-x:hidden;max-width:100%;position:relative}
               </select>
             </div>
           </div>
-          <div><label for="plan">الباقة</label>
-            <select id="plan">
-              <option value="مش متأكد، عايز عرض سعر">مش متأكد، عايز عرض سعر</option>
-              <option value="أساسي (500 جنيه)">أساسي: من 500 جنيه، تسليم من 1 إلى 3 أيام</option>
-              <option value="متوسط (750 جنيه)">متوسط: 750 جنيه، تسليم من 3 إلى 6 أيام</option>
-              <option value="متقدم (950 جنيه)">متقدم: حتى 950 جنيه، تسليم من 6 إلى 10 أيام</option>
-            </select>
-          </div>
           <div><label for="msg">تفاصيل المشروع *</label><textarea id="msg" rows="5" placeholder="اكتب فكرتك باختصار..." required></textarea></div>
-          <input type="text" id="gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-          <button type="button" class="btn main-send" id="sendForm" hidden>إرسال الطلب</button>
           <div class="send">
             <button type="button" class="btn wa" id="sendWa">إرسال عبر واتساب</button>
             <button type="button" class="btn gm" id="sendGm">إرسال عبر Gmail</button>
           </div>
-          <p class="hint" id="formHint">هيفتحلك واتساب أو Gmail ومعاه بياناتك جاهزة، اضغط إرسال هناك.</p>
+          <p class="hint">هيفتحلك واتساب أو Gmail ومعاه بياناتك جاهزة، اضغط إرسال هناك.</p>
         </form>
       </div>
     </div>
@@ -573,16 +515,7 @@ body{overflow-x:hidden;max-width:100%;position:relative}
 /* ====== إعدادات التواصل: غيّر القيم دي ====== */
 var CONFIG = {
   whatsapp: '201223073828',   // رقمك بالصيغة الدولية بدون + أو أصفار (مصر: 20 + الرقم بدون الصفر)
-  email: ['tomasezzat2012', 'gmail.com'].join('@'),     // بريد Gmail (مكتوب متقسم عشان ما يتسحبش من الصفحة)
-  form: '',   // رابط الفورم من Formspree (بيبقى شكله https://formspree.io/f/xxxxxxxx). لما تحطه، الطلبات توصلك على إيميلك لوحدها
-  sheet: '',   // سيبه فاضي (ده للجدول الخارجي لو احتجناه بعدين)
-
-  /* ======== مشاريعنا: ضيف مشروع جديد بنسخ سطر من اللي تحت ========
-     كل مشروع بين { } وبعده فاصلة. الحقول: title و description و category و link و image
-     (link و image اختياريين). الصورة ممكن رابط أو اسم ملف مرفوع جنب index.html زي images/app1.png */
-  projects: [
-    // { title: 'اسم المشروع', description: 'وصف قصير', category: 'تطبيق موبايل', link: 'https://example.com', image: 'images/app1.png' },
-  ]
+  email: 'tomasezzat2012@gmail.com'     // بريد Gmail اللي هتستقبل عليه الرسائل
 };
 /* ======================================== */
 
@@ -590,11 +523,6 @@ var CONFIG = {
   var $ = function(s){return document.querySelector(s)};
   $('#year').textContent = new Date().getFullYear();
   $('#fab').href = 'https://wa.me/' + CONFIG.whatsapp;
-  $('#waBtn').href = 'https://wa.me/' + CONFIG.whatsapp;
-  $('#mailBtn').addEventListener('click', function(e){
-    e.preventDefault();
-    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(CONFIG.email) + '&su=' + encodeURIComponent('استفسار من موقع Codex'), '_blank', 'noopener');
-  });
 
   /* هيدر + شريط التقدم + القائمة النشطة */
   var header = $('#header'), prog = $('#progress');
@@ -603,15 +531,14 @@ var CONFIG = {
   function onScroll(){
     var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
     header.classList.toggle('scrolled', y > 20);
-    prog.style.transform = 'scaleX(' + (h > 0 ? y / h : 0) + ')';
+    prog.style.width = (y / h * 100) + '%';
     var cur = 0;
-    secs.forEach(function(s,i){ if (s && !s.hidden && s.getBoundingClientRect().top < 140) cur = i; });
+    secs.forEach(function(s,i){ if (s && s.getBoundingClientRect().top < 140) cur = i; });
     links.forEach(function(a,i){ a.classList.toggle('active', i === cur); });
   }
-  var tick = false;
-  addEventListener('scroll', function(){ if (!tick){ tick = true; requestAnimationFrame(function(){ tick = false; onScroll() }) } }, {passive:true}); onScroll();
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
-  $('#burger').onclick = function(){ var o = $('#menu').classList.toggle('open'); this.setAttribute('aria-expanded', o) };
+  $('#burger').onclick = function(){ $('#menu').classList.toggle('open') };
   links.forEach(function(a){ a.addEventListener('click', function(){ $('#menu').classList.remove('open') }) });
 
   /* ظهور عند التمرير */
@@ -620,8 +547,19 @@ var CONFIG = {
   }, {threshold:.15});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el) });
 
+  /* تأثير الإضاءة والميلان على البطاقات */
+  var fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  document.querySelectorAll('.card').forEach(function(c){
+    c.addEventListener('mousemove', function(e){
+      var r = c.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+      c.style.setProperty('--mx', x + 'px'); c.style.setProperty('--my', y + 'px');
+      if (fine) c.style.transform = 'perspective(800px) rotateX(' + ((y/r.height-.5)*-8) + 'deg) rotateY(' + ((x/r.width-.5)*8) + 'deg) translateY(-4px)';
+    });
+    c.addEventListener('mouseleave', function(){ c.style.transform = '' });
+  });
+
   /* كتابة تلقائية */
-  var words = ['تطبيق موبايل','موقع ويب','متجر إلكتروني','منتج رقمي يشتغل'];
+  var words = ['تطبيق موبايل احترافي','تطبيق ويب قوي','متجر إلكتروني متكامل','منتج رقمي ناجح'];
   var t = $('#typed'), wi = 0, ci = 0, del = false;
   (function type(){
     var w = words[wi];
@@ -644,57 +582,78 @@ var CONFIG = {
     else { dl = false; si = (si + 1) % seq.length; setTimeout(codeType, 350) }
   })();
 
-  /* خلفية متحركة: أرقام وأكواد بتنزل. الحروف بتتجهّز مرة واحدة وبتترسم كصور عشان الأداء يفضل خفيف */
-  var rn = $('#rain'), rc = rn.getContext('2d'), fs = 18, TRAIL = 16, CW = 12, CH = 22, cols, RW, RH, streams = [], lastT = 0, ema = 0, nf = 0;
-  var chars = '01010101{}[]<>/;=+*#$%&0123456789'.split(''), NC = chars.length;
-  var conn = navigator.connection || {};
-  var lite = matchMedia('(pointer:coarse)').matches || innerWidth < 760 || conn.saveData || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4);
-  var step = lite ? fs * 1.8 : fs;
-  var atlas = document.createElement('canvas'); atlas.width = CW * NC; atlas.height = CH * (2 * TRAIL + 1);
-  (function(){
-    var ac = atlas.getContext('2d'); ac.font = fs + 'px "Courier New",monospace';
-    for (var r = 0; r < 2 * TRAIL + 1; r++){
-      var col;
-      if (r === 2 * TRAIL) col = 'rgba(220,255,240,.9)';
-      else col = (r < TRAIL ? 'rgba(34,211,166,' : 'rgba(108,140,255,') + (Math.pow(1 - (r % TRAIL) / TRAIL, 1.6) * .75).toFixed(3) + ')';
-      ac.fillStyle = col;
-      for (var i = 0; i < NC; i++) ac.fillText(chars[i], i * CW + 1, r * CH + fs);
-    }
-  })();
-  function rch(){ return Math.floor(Math.random() * NC) }
-  function mk(initial){
-    var s = { y: initial ? Math.random() * (RH + TRAIL * fs) : -Math.random() * RH * .4, v: 45 + Math.random() * 70, t: 0, ch: [] };
-    for (var k = 0; k < TRAIL; k++) s.ch.push(rch());
-    return s;
-  }
+  /* خلفية متحركة: أرقام وأكواد بتنزل */
+  var rn = $('#rain'), rc = rn.getContext('2d'), fs = 18, cols, drops, RW, RH, lastY = [];
+  var chars = '01010101{}[]<>/;=+*#$%&0123456789'.split('');
   function rsize(){
     RW = rn.width = innerWidth; RH = rn.height = innerHeight;
-    cols = Math.floor(RW / step); streams = [];
-    for (var i = 0; i < cols; i++) streams.push(mk(true));
+    cols = Math.floor(RW / fs); drops = [];
+    for (var i = 0; i < cols; i++) drops.push(Math.random() * -RH / fs);
   }
   rsize(); addEventListener('resize', rsize);
-  function rain(now){
-    if (lite && now - lastT < 33){ requestAnimationFrame(rain); return }
-    var t0 = performance.now();
-    var dt = Math.min(.05, (now - lastT) / 1000 || .016); lastT = now;
-    rc.clearRect(0, 0, RW, RH);
+  function rain(){
+    /* تلاشي ناعم للأثر بدل المسح الحاد */
+    rc.globalCompositeOperation = 'destination-out';
+    rc.fillStyle = 'rgba(0,0,0,.07)'; rc.fillRect(0, 0, RW, RH);
+    rc.globalCompositeOperation = 'source-over';
+    rc.font = fs + 'px "Courier New",monospace';
     for (var i = 0; i < cols; i++){
-      var s = streams[i], x = Math.round(i * step), base = i % 3 ? 0 : TRAIL;
-      s.y += s.v * dt; s.t += dt;
-      if (s.t > .15){ s.t = 0; s.ch[Math.floor(Math.random() * TRAIL)] = rch() }
-      for (var k = 0; k < TRAIL; k++){
-        var y = s.y - k * fs;
-        if (y < -fs || y > RH + fs) continue;
-        rc.drawImage(atlas, s.ch[k] * CW, (k === 0 ? 2 * TRAIL : base + k) * CH, CW, CH, x, Math.round(y - fs), CW, CH);
+      if (!(i % 2)) continue;               /* أعمدة أقل = هدوء أكتر */
+      var x = i * fs, y = Math.floor(drops[i]) * fs;
+      if (y !== lastY[i]) {                 /* نرسم حرف جديد بس لما يتحرك سطر */
+        lastY[i] = y;
+        rc.fillStyle = i % 3 ? 'rgba(34,211,166,.5)' : 'rgba(108,140,255,.5)';
+        rc.fillText(chars[Math.floor(Math.random() * chars.length)], x, y);
       }
-      if (s.y - TRAIL * fs > RH) streams[i] = mk(false);
+      if (y > RH && Math.random() > .985) drops[i] = 0;
+      drops[i] += .16;                      /* أبطأ وأنعم */
     }
-    /* لو الجهاز بطيء، بنخفف الخلفية لوحدها */
-    ema = ema * .9 + (performance.now() - t0) * .1;
-    if (++nf === 60 && !lite && ema > 5){ lite = true; step = fs * 1.8; rsize() }
-    requestAnimationFrame(rain);
+    if (rainRunning) requestAnimationFrame(rain);
   }
-  if (!matchMedia('(prefers-reduced-motion:reduce)').matches) requestAnimationFrame(rain);
+  var rainRunning = false;
+  function startRain(){ if (!rainRunning){ rainRunning = true; rain() } }
+  function stopRain(){ rainRunning = false }
+  if (!matchMedia('(prefers-reduced-motion:reduce)').matches) startRain();
+  document.addEventListener('visibilitychange', function(){ if (document.hidden) stopRain(); else startRain() });
+
+  /* جزيئات الخلفية */
+  var cv = $('#particles'), cx = cv.getContext('2d'), P = [], W, H, mouse = {x:-999,y:-999};
+  var heroVisible = true, particlesRunning = false;
+  function size(){ W = cv.width = cv.offsetWidth; H = cv.height = cv.offsetHeight;
+    var n = Math.min(40, Math.floor(W * H / 24000)); P = [];
+    for (var i = 0; i < n; i++) P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5}); }
+  size(); addEventListener('resize', size);
+  cv.parentNode.addEventListener('mousemove', function(e){ var r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top });
+  function draw(){
+    if (!particlesRunning) return;
+    cx.clearRect(0,0,W,H);
+    for (var i = 0; i < P.length; i++){
+      var p = P[i]; p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
+      cx.beginPath(); cx.arc(p.x, p.y, 1.8, 0, 6.283); cx.fillStyle = 'rgba(140,170,255,.8)'; cx.fill();
+      for (var j = i + 1; j < P.length; j++){
+        var q = P[j], d = Math.hypot(p.x - q.x, p.y - q.y);
+        if (d < 130){ cx.strokeStyle = 'rgba(108,140,255,' + (1 - d/130) * .35 + ')'; cx.beginPath(); cx.moveTo(p.x,p.y); cx.lineTo(q.x,q.y); cx.stroke() }
+      }
+      var m = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+      if (m < 160){ cx.strokeStyle = 'rgba(34,211,166,' + (1 - m/160) * .6 + ')'; cx.beginPath(); cx.moveTo(p.x,p.y); cx.lineTo(mouse.x,mouse.y); cx.stroke() }
+    }
+    requestAnimationFrame(draw);
+  }
+  function startParticles(){ if (!particlesRunning){ particlesRunning = true; draw() } }
+  function stopParticles(){ particlesRunning = false }
+  var reduceMotion = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(entries){
+      heroVisible = entries[0].isIntersecting;
+      if (heroVisible && !document.hidden) startParticles(); else stopParticles();
+    }).observe($('#home'));
+  } else if (!reduceMotion){
+    startParticles();
+  }
+  document.addEventListener('visibilitychange', function(){
+    if (document.hidden) stopParticles(); else if (heroVisible && !reduceMotion) startParticles();
+  });
 
   /* نموذج التواصل: واتساب / Gmail */
   var toast = $('#toast'), tt;
@@ -707,47 +666,9 @@ var CONFIG = {
       subject: 'طلب مشروع جديد من ' + name,
       body: 'طلب جديد من موقع Codex\n\nالاسم: ' + name + '\nالهاتف: ' + phone +
             '\nالبريد: ' + (val('email') || '—') + '\nنوع المشروع: ' + $('#service').value +
-            '\nالباقة: ' + $('#plan').value +
             '\n\nالتفاصيل:\n' + msg
     };
   }
-  /* اختيار الباقة من كروت الأسعار */
-  document.querySelectorAll('[data-plan]').forEach(function(a){
-    a.addEventListener('click', function(){ var sel = $('#plan'); if (sel && sel.options[+a.getAttribute('data-plan')]) sel.selectedIndex = +a.getAttribute('data-plan') });
-  });
-
-  /* إرسال الطلب لإيميلك مباشرة (Formspree) */
-  var sf = $('#sendForm'), lastSent = 0;
-  if (CONFIG.form){
-    sf.hidden = false;
-    $('#formHint').textContent = 'هيوصلنا طلبك على طول وهنرد عليك قريب. وتقدر كمان تبعته على واتساب أو Gmail.';
-    $('#sendWa').textContent = 'أو عبر واتساب'; $('#sendGm').textContent = 'أو عبر Gmail';
-  }
-  sf.onclick = function(){
-    var d = collect(); if (!d) return;
-    if ($('#gotcha').value) return;
-    if (Date.now() - lastSent < 30000){ say('تم إرسال طلبك، استنى شوية قبل ما تبعت تاني'); return }
-    var old = sf.textContent; sf.disabled = true; sf.textContent = 'جاري الإرسال...';
-    fetch(CONFIG.form, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-      body: JSON.stringify({
-        _subject: d.subject,
-        name: val('name'), phone: val('phone'), email: val('email'),
-        project_type: $('#service').value, plan: $('#plan').value,
-        message: val('msg'), page: location.href
-      })
-    }).then(function(r){
-      if (!r.ok) throw new Error(r.status);
-      lastSent = Date.now();
-      say('وصلنا طلبك ✅ هنرد عليك في أقرب وقت');
-      ['name','phone','email','msg'].forEach(function(i){ $('#' + i).value = '' });
-      $('#plan').selectedIndex = 0;
-    }).catch(function(){
-      say('معرفناش نبعت الطلب. جرّب واتساب أو Gmail');
-    }).then(function(){ sf.disabled = false; sf.textContent = old });
-  };
-
   $('#sendWa').onclick = function(){
     var d = collect(); if (!d) return;
     window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(d.body), '_blank');
@@ -759,77 +680,6 @@ var CONFIG = {
       '&su=' + encodeURIComponent(d.subject) + '&body=' + encodeURIComponent(d.body), '_blank');
     say('تم فتح Gmail، اضغط إرسال هناك ✅');
   };
-})();
-
-/* ====== أعمالنا: بتتقرا من Google Sheet ====== */
-(function(){
-  var box = document.getElementById('projects-grid');
-  if (!box) return;
-  function msg(t){ box.innerHTML = ''; var d = document.createElement('div'); d.className = 'proj-msg'; d.textContent = t; box.appendChild(d) }
-  function parseCSV(t){
-    var rows = [], row = [], f = '', q = false;
-    for (var i = 0; i < t.length; i++){
-      var c = t.charAt(i);
-      if (q){ if (c === '"'){ if (t.charAt(i + 1) === '"'){ f += '"'; i++ } else q = false } else f += c }
-      else if (c === '"') q = true;
-      else if (c === ','){ row.push(f); f = '' }
-      else if (c === '\n' || c === '\r'){ if (c === '\r' && t.charAt(i + 1) === '\n') i++; row.push(f); f = ''; rows.push(row); row = [] }
-      else f += c;
-    }
-    if (f !== '' || row.length){ row.push(f); rows.push(row) }
-    return rows;
-  }
-  function safeUrl(u){ u = (u || '').trim(); return /^(https?:\/\/[^\s]+|[\w\-][\w\-.\/%]*)$/i.test(u) ? u : '' }
-  function imgUrl(u){
-    u = safeUrl(u);
-    var m = u.match(/drive\.google\.com\/file\/d\/([\w-]+)/) || u.match(/drive\.google\.com\/(?:open|uc)\?(?:[^#]*&)?id=([\w-]+)/);
-    return m ? 'https://drive.google.com/thumbnail?id=' + m[1] + '&sz=w900' : u;
-  }
-  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
-    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target) } });
-  }, {threshold:.12}) : null;
-  function card(p, i){
-    var a = document.createElement('article'); a.className = 'card proj reveal d' + (i % 3 + 1);
-    var pic = document.createElement('div'); pic.className = 'pic';
-    var src = imgUrl(p.image);
-    if (src){ var im = document.createElement('img'); im.src = src; im.alt = p.title; im.loading = 'lazy'; im.referrerPolicy = 'no-referrer';
-      im.onerror = function(){ im.remove(); pic.textContent = p.title.charAt(0) }; pic.appendChild(im) }
-    else pic.textContent = p.title.charAt(0);
-    a.appendChild(pic);
-    var b = document.createElement('div'); b.className = 'pbody';
-    if (p.category){ var c = document.createElement('span'); c.className = 'cat'; c.textContent = p.category; b.appendChild(c) }
-    var h = document.createElement('h3'); h.textContent = p.title; b.appendChild(h);
-    if (p.description){ var d = document.createElement('p'); d.textContent = p.description; b.appendChild(d) }
-    var link = safeUrl(p.link);
-    if (link){ var g = document.createElement('a'); g.className = 'go'; g.href = link; g.target = '_blank'; g.rel = 'noopener'; g.textContent = 'شوف المشروع ←'; b.appendChild(g) }
-    a.appendChild(b); return a;
-  }
-  function render(list){
-    var sec = document.getElementById('projects'), nav = document.querySelector('#menu a[href="#projects"]');
-    if (!list.length){ if (sec) sec.hidden = true; if (nav) nav.parentNode.hidden = true; return }
-    if (sec) sec.hidden = false; if (nav) nav.parentNode.hidden = false;
-    box.innerHTML = '';
-    list.forEach(function(p, i){ var c = card(p, i); box.appendChild(c); if (io) io.observe(c); else c.classList.add('in') });
-  }
-  if (!CONFIG.sheet){
-    var base = CONFIG.projects || [];
-    fetch('projects.json?v=' + Date.now()).then(function(r){ if (!r.ok) throw 0; return r.json() }).then(function(j){
-      var extra = Array.isArray(j) ? j.filter(function(p){ return p && p.title && !p.hidden }) : [];
-      render(extra.concat(base));
-    }).catch(function(){ render(base) });
-    return;
-  }
-  fetch(CONFIG.sheet).then(function(r){ if (!r.ok) throw 0; return r.text() }).then(function(t){
-    var rows = parseCSV(t).filter(function(r){ return r.some(function(x){ return x.trim() }) });
-    if (rows.length < 2){ render([]); return }
-    var head = rows[0].map(function(h){ return h.trim().toLowerCase() }), list = [];
-    rows.slice(1).forEach(function(r){
-      var o = {}; head.forEach(function(h, i){ o[h] = (r[i] || '').trim() });
-      var hide = /^(no|false|0|hide|hidden|لا)$/i.test(o.show || '');
-      if (o.title && !hide) list.push(o);
-    });
-    render(list);
-  }).catch(function(){ msg('مقدرناش نحمّل المشاريع دلوقتي، جرّب تحدّث الصفحة بعد شوية.') });
 })();
 </script>
 </body>
