@@ -355,7 +355,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:v
       <span class="eyebrow reveal">مشاريعنا</span>
       <h2 class="reveal">من شغلنا <span class="grad-text">الحقيقي</span></h2>
       <p class="sub reveal">نماذج فعلية من تطبيقات اتعملت وبتشتغل دلوقتي</p>
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+      <div class="grid" id="projGrid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
         <div class="card reveal">
           <div class="icon">⚖️</div>
           <h3>LawyerDiary</h3>
@@ -654,6 +654,31 @@ var CONFIG = {
   document.addEventListener('visibilitychange', function(){
     if (document.hidden) stopParticles(); else if (heroVisible && !reduceMotion) startParticles();
   });
+
+  /* تحميل مشاريع إضافية من لوحة الأدمن (projects.json) - مرة واحدة بس لما القسم يظهر */
+  var projSection = document.getElementById('projects'), projLoaded = false;
+  function renderExtraProjects(list){
+    var grid = document.getElementById('projGrid');
+    list.forEach(function(p){
+      if (!p || !p.title) return;
+      var card = document.createElement('div');
+      card.className = 'card reveal in';
+      var img = p.image ? '<img src="' + p.image + '" alt="" style="width:100%;border-radius:12px;margin-bottom:14px;max-height:140px;object-fit:cover">' : '<div class="icon">📦</div>';
+      var link = p.link ? '<a href="' + p.link + '" target="_blank" rel="noopener" class="btn ghost" style="margin-top:14px">عرض المشروع</a>' : '';
+      card.innerHTML = img + '<h3>' + p.title + '</h3><p>' + (p.description || '') + '</p>' + link;
+      grid.appendChild(card);
+    });
+  }
+  if (projSection && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(entries, obs){
+      if (entries[0].isIntersecting && !projLoaded){
+        projLoaded = true; obs.disconnect();
+        fetch('projects.json?v=' + Date.now()).then(function(r){ if (!r.ok) throw 0; return r.json() })
+          .then(function(j){ if (Array.isArray(j)) renderExtraProjects(j) })
+          .catch(function(){});
+      }
+    }, {rootMargin:'200px'}).observe(projSection);
+  }
 
   /* نموذج التواصل: واتساب / Gmail */
   var toast = $('#toast'), tt;
