@@ -82,6 +82,20 @@ a{color:var(--b)}
       <h2>المشاريع الحالية <span class="muted" id="count"></span></h2>
       <div id="list"><p class="muted">بنحمّل...</p></div>
     </div>
+    <div class="card">
+      <h2 id="revFormTitle">إضافة رأي عميل</h2>
+      <label for="revName">اسم العميل *</label><input id="revName" type="text" maxlength="60">
+      <label for="revEmail">إيميل العميل (اختياري، لنفسك بس مش بيظهر بالموقع)</label><input id="revEmail" type="email" dir="ltr">
+      <label for="revStars">التقييم</label>
+      <select id="revStars"><option value="5">★★★★★</option><option value="4">★★★★</option><option value="3">★★★</option></select>
+      <label for="revText">نص الرأي *</label><textarea id="revText" rows="3" maxlength="300"></textarea>
+      <button id="revAdd">نشر على الموقع</button>
+      <button id="revCancel" class="sec" style="display:none;margin-inline-start:8px">إلغاء التعديل</button>
+    </div>
+    <div class="card">
+      <h2>الآراء المنشورة <span class="muted" id="revCount"></span></h2>
+      <div id="revList"><p class="muted">بنحمّل...</p></div>
+    </div>
     <div class="row"><button class="sec" id="logout">خروج</button><a href="./" style="margin-top:14px">فتح الموقع ←</a></div>
   </div>
 </div>
@@ -243,11 +257,89 @@ a{color:var(--b)}
       .catch(function(e){ say(e.message) }).then(function(){ lock(false) });
   };
 
+  /* ===== الآراء (reviews.json) ===== */
+  var revEditing = null, curRevList = [];
+  function readRevList(){
+    return gh('/contents/reviews.json?ref=' + BR, {allow404:true}).then(function(j){
+      if (!j) return { list: [], sha: undefined };
+      var list = []; try { list = JSON.parse(b64dec(j.content)) } catch(e){}
+      return { list: Array.isArray(list) ? list : [], sha: j.sha };
+    });
+  }
+  function writeRevList(list, sha, message){
+    var body = { message: message, content: b64enc(JSON.stringify(list, null, 2) + '\n'), branch: BR };
+    if (sha) body.sha = sha;
+    return gh('/contents/reviews.json', { method: 'PUT', body: body });
+  }
+  function renderRev(list){
+    $('revCount').textContent = list.length ? '(' + list.length + ')' : '';
+    var box = $('revList'); box.innerHTML = '';
+    if (!list.length){ var p = document.createElement('p'); p.className = 'muted'; p.textContent = 'لسه مفيش آراء منشورة.'; box.appendChild(p); return }
+    list.forEach(function(r, i){
+      var it = document.createElement('div'); it.className = 'item';
+      var pic = document.createElement('div'); pic.className = 'ph'; pic.textContent = (r.name || '?').charAt(0);
+      var t = document.createElement('div'); t.className = 't';
+      var b = document.createElement('b'); b.textContent = r.name;
+      var s = document.createElement('span'); s.className = 'muted'; s.textContent = '★'.repeat(r.stars || 5) + ' — ' + (r.text || '').slice(0,40);
+      t.appendChild(b); t.appendChild(s);
+      var d = document.createElement('button'); d.className = 'del'; d.textContent = 'مسح';
+      d.onclick = function(){ removeRev(i, r.name) };
+      var e = document.createElement('button'); e.className = 'edit'; e.textContent = 'تعديل';
+      e.onclick = function(){ startEditRev(i) };
+      it.appendChild(pic); it.appendChild(t); it.appendChild(e); it.appendChild(d); box.appendChild(it);
+    });
+  }
+  function refreshRev(){ return readRevList().then(function(r){ curRevList = r.list; renderRev(r.list); return r }) }
+  function resetRevForm(){
+    revEditing = null;
+    $('revName').value = ''; $('revEmail').value = ''; $('revText').value = ''; $('revStars').value = '5';
+    $('revFormTitle').textContent = 'إضافة رأي عميل'; $('revAdd').textContent = 'نشر على الموقع'; $('revCancel').style.display = 'none';
+  }
+  function startEditRev(i){
+    var r = curRevList[i]; if (!r) return;
+    revEditing = { i: i, name: r.name };
+    $('revName').value = r.name || ''; $('revEmail').value = r.email || ''; $('revText').value = r.text || ''; $('revStars').value = String(r.stars || 5);
+    $('revFormTitle').textContent = 'تعديل رأي: ' + (r.name || ''); $('revAdd').textContent = 'حفظ التعديل'; $('revCancel').style.display = '';
+    $('revName').scrollIntoView({behavior:'smooth', block:'center'});
+  }
+  $('revCancel').onclick = function(){ if (!busy) resetRevForm() };
+  function removeRev(i, name){
+    if (busy || !confirm('تمسح رأي "' + name + '"؟')) return;
+    lock(true);
+    readRevList().then(function(r){
+      var list = r.list.filter(function(x, k){ return !(k === i && x.name === name) });
+      return writeRevList(list, r.sha, 'Remove review');
+    }).then(refreshRev).then(function(){ say('اتمسح.', true) })
+      .catch(function(e){ say(e.message) }).then(function(){ lock(false) });
+  }
+  $('revAdd').onclick = function(){
+    if (busy) return;
+    var name = $('revName').value.trim(), text = $('revText').value.trim();
+    if (!name || !text){ say('اكتب اسم العميل ونص الرأي.'); return }
+    lock(true);
+    readRevList().then(function(r){
+      var item = { name: name, email: $('revEmail').value.trim(), stars: Number($('revStars').value), text: text };
+      if (revEditing){
+        var idx = -1;
+        for (var k = 0; k < r.list.length; k++){ if (r.list[k].name === revEditing.name){ idx = k; if (k === revEditing.i) break } }
+        if (idx < 0) throw new Error('الرأي ده اتغيّر أو اتمسح. حدّث الصفحة وجرّب تاني.');
+        var list = r.list.slice(); list[idx] = Object.assign({}, list[idx], item);
+        return writeRevList(list, r.sha, 'Edit review: ' + name.slice(0, 40));
+      }
+      return writeRevList([item].concat(r.list), r.sha, 'Add review: ' + name.slice(0, 40));
+    }).then(function(){
+      var was = !!revEditing; resetRevForm();
+      return refreshRev().then(function(){ return was });
+    }).then(function(was){ say(was ? 'اتحفظ التعديل ✅' : 'اتنشر ✅ هيظهر على الموقع خلال دقيقة.', true) })
+      .catch(function(e){ say(e.message) }).then(function(){ lock(false) });
+  };
+
   function enter(){
     $('loginCard').style.display = 'none'; $('app').style.display = 'grid';
     refresh().catch(function(e){
       say(e.message); localStorage.removeItem(K); $('loginCard').style.display = ''; $('app').style.display = 'none';
     });
+    refreshRev().catch(function(e){ say(e.message) });
   }
   $('login').onclick = function(){
     var t = $('tok').value.replace(/[^\x21-\x7e]/g, ''), r = $('repo').value.replace(/\s/g, '');
